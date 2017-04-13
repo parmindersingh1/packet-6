@@ -39,16 +39,52 @@
 						<div class="col-md-4 col-lg-12">
 							<div class="panel panel-white no-radius no-border">
 								<ct-paneltool class="panel-tools" tool-refresh="load1"></ct-paneltool>
-								<div class="panel-body no-padding" ng-controller="AcquisitionCtrl">
-									<dt-bar-chart name="Datiot" percentage="10" extra-text="All Sessions" labels="labels" data="data" colors="colors" count="{{count}}" total-count="{{totalCount}}"></dt-bar-chart>						
+								<div class="panel-body no-padding">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="padding-15">
+												<h5 class="text-dark">Acquisition</h5>
+												<p>
+													<span class="label label-success margin-right-10">100%</span><span class="text-bold text-extra-small">All Sessions</span>
+												</p>
+												<p>
+													<span class="text-small"> (17,869 of 17,869)</span>
+												</p>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<!-- /// controller:  'AcquisitionCtrl' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+											<div ng-controller="AcquisitionCtrl">
+												<canvas class="chart chart-bar height-65" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 col-lg-12">
-							<div class="panel panel-white no-radius no-border" ng-controller="ConversionsCtrl" > 
+							<div class="panel panel-white no-radius no-border">
 								<ct-paneltool class="panel-tools" tool-refresh="load1"></ct-paneltool>
 								<div class="panel-body no-padding">
-									<dt-line-chart name="Conversions" extra-text="Ecommerce Conversion Rate" percentage="1,20" labels="labels" data="data" colors="colors" series="series"></dt-line-chart>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="padding-15">
+												<h5 class="text-dark">Conversions</h5>
+												<p>
+													<i class="fa fa-circle text-azure margin-right-5"></i><span class="text-bold text-extra-small">Ecommerce Conversion Rate</span>
+												</p>
+												<p>
+													<span class="text-small"> 1,20%</span>
+												</p>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<!-- /// controller:  'ConversionsCtrl' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+											<div ng-controller="ConversionsCtrl" class="margin-negative-5">
+												<canvas class="chart chart-line height-75" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -61,8 +97,51 @@
 							<ct-paneltool class="panel-tools" tool-refresh="load1" tool-expand="tool-expand"></ct-paneltool>
 						</div>
 						<div class="panel-wrapper">
-							<div class="panel-body" ng-controller="ProductsCtrl">
-								<dt-multi-line-chart name="Conversions" extra-text="Ecommerce Conversion Rate" percentage="{{percentage}}" count="{{count}}" labels="labels" data="data" colors="colors" series="series" legends="legendData"></dt-multi-line-chart>
+							<div class="panel-body">
+								<div class="block">
+									<div class="pull-left">
+										<h3 class="inline-block text-red text-bold"> 207K </h3>
+										<span class="inline-block text-extra-small text-green">+8.24 %</span>
+									</div>
+									<div class="text-right">
+										<button class="btn btn-xs btn-grey">
+											Hourly
+										</button>
+										<button class="btn btn-xs btn-grey">
+											Day
+										</button>
+										<button class="btn btn-xs btn-grey">
+											Week
+										</button>
+										<button class="btn btn-xs btn-grey active">
+											Month
+										</button>
+									</div>
+								</div>
+								<!-- /// controller:  'ProductsCtrl' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+								<div ng-controller="ProductsCtrl">
+									<canvas class="chart chart-line height-300" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas>
+								</div>
+								<div class="row padding-top-25">
+									<div class="col-xs-4 text-center">
+										<div class="margin-bottom-10">
+											<letter-icon data="Alpha" color="#947499" size="sm" class="margin-right-10"></letter-icon><span class="text-extra-large text-bold">+5,04 %</span>
+										</div>
+										Alpha
+									</div>
+									<div class="col-xs-4 text-center">
+										<div class="margin-bottom-10">
+											<letter-icon data="Omega" color="#7F8C8D" size="sm" class="margin-right-10"></letter-icon><span class="text-extra-large text-bold">+2,21 %</span>
+										</div>
+										Omega
+									</div>
+									<div class="col-xs-4 text-center">
+										<div class="margin-bottom-10">
+											<letter-icon data="Kappa" color="#5A8770" size="sm" class="margin-right-10"></letter-icon><span class="text-extra-large text-bold">+0,68 %</span>
+										</div>
+										Kappa
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="panel-footer no-border">
@@ -185,15 +264,31 @@
 				<div class="col-sm-6">
 					<div class="panel panel-green no-border no-radius">
 						<ct-paneltool class="panel-tools" tool-refresh="load1"></ct-paneltool>
-						<div class="panel-body no-padding" ng-controller="LineCtrl">
-							<dt-line-chart-block name="Revenue YTD" price="{{price}}" increment={{increment}} percentage="{{percentage}}" labels="labels" data="data" colors="colors"></dt-line-chart-block>
+						<div class="panel-body no-padding">
+							<div class="space10 padding-15">
+								<h5 class="text-bold text-extra-small text-dark-transparent text-uppercase no-margin">Revenue YTD <i class="fa fa-arrow-circle-o-right"></i></h5>
+								<h2 class="text-white margin-top-15 margin-bottom-10">$159M</h2>
+								<span class="label background-light text-dark margin-top-10 margin-right-5">+6.24M</span><span class="text-extra-small">+4.08%</span>
+							</div>
+							<!-- /// controller:  'LineCtrl' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+							<div ng-controller="LineCtrl">
+								<canvas class="chart chart-line height-80" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="panel panel-azure no-border no-radius">
-						<div class="panel-body no-padding" ng-controller="BarCtrl">
-							<dt-bar-chart-block name="Expenses YTD" price="{{price}}" increment={{increment}} percentage="{{percentage}}" labels="labels" data="data" colors="colors"></dt-bar-chart-block>
+						<div class="panel-body no-padding">
+							<div class="space10 padding-15">
+								<h5 class="text-bold text-extra-small text-dark-transparent text-uppercase no-margin">Expenses YTD <i class="fa fa-arrow-circle-o-right"></i></h5>
+								<h2 class="text-white margin-top-15 margin-bottom-10">$30.6M</h2>
+								<span class="label background-light text-dark margin-top-10 margin-right-5">+15.3K</span><span class="text-extra-small">+0.05%</span>
+							</div>
+							<!-- /// controller:  'BarCtrl2' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+							<div ng-controller="BarCtrl2">
+								<canvas class="chart chart-bar height-80" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -209,12 +304,12 @@
 										<span class="text-dark-transparent margin-bottom-5 block">active users on site</span>
 									</div>
 									<div class="height-80 margin-bottom-10">
-										<!-- /// controller:  'KnobCtrl1' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
-										<div class="inline-block margin-right-25" ng-controller="KnobCtrl1">
+										<!-- /// controller:  'KnobCtrl3' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+										<div class="inline-block margin-right-25" ng-controller="KnobCtrl3">
 											<ui-knob value="value" options="options"></ui-knob><span class="text-white block">CPU used</span>
 										</div>
-										<!-- /// controller:  'KnobCtrl2' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
-										<div class="inline-block" ng-controller="KnobCtrl2">
+										<!-- /// controller:  'KnobCtrl4' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+										<div class="inline-block" ng-controller="KnobCtrl4">
 											<ui-knob value="value" options="options"></ui-knob><span class="text-white block">RAM used</span>
 										</div>
 									</div>
@@ -227,7 +322,16 @@
 					<div class="panel panel-pink no-border no-radius">
 						<ct-paneltool class="panel-tools" tool-refresh="load1"></ct-paneltool>
 						<div class="panel-body no-padding">
-							<dt-progress-bar-block name="Total Products" total="5,635" percentage="89" extra-text="with active listings" progress="89"></dt-progress-bar-block>
+							<div class="space10 padding-15">
+								<h5 class="text-bold text-extra-small text-dark-transparent text-uppercase no-margin">Total Products <i class="fa fa-arrow-circle-o-right"></i></h5>
+								<h2 class="text-white margin-top-15 margin-bottom-10">5,635</h2>
+								<span class="label background-light text-dark margin-top-10 margin-right-5">89%</span><span class="text-extra-small">with active listings</span>
+							</div>
+							<div class="min-height-80">
+								<div class="padding-top-20">
+									<uib-progressbar value="89" class="progress-xs no-radius background-dark no-margin" type="white"></uib-progressbar>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -338,8 +442,8 @@
 									<p>
 										<span class="text-bold">Social Traffic</span><span class="text-light"> (7 days)</span>
 									</p>
-									<!-- /// controller:  'SocialCtrl1' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
-									<div ng-controller="SocialCtrl1">
+									<!-- /// controller:  'SocialCtrl3' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+									<div ng-controller="SocialCtrl3">
 										<div class="text-center">
 											<span class="mini-pie-100"> <canvas class="chart chart-doughnut" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas> </span>
 										</div>
@@ -352,8 +456,8 @@
 									<p>
 										<span class="text-bold">Marketing Channels</span><span class="text-light"> (7 days)</span>
 									</p>
-									<!-- /// controller:  'SocialCtrl2' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
-									<div ng-controller="SocialCtrl2">
+									<!-- /// controller:  'SocialCtrl4' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
+									<div ng-controller="SocialCtrl4">
 										<div class="text-center">
 											<span class="mini-pie-100"> <canvas class="chart chart-doughnut" chart-data="data" chart-options="options" chart-labels="labels" chart-series="series" chart-colours="colors"></canvas></span>
 										</div>

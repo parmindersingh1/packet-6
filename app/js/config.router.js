@@ -30,12 +30,12 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     // Set up the states
     $stateProvider.state('app', {
         url: "/app",
-        templateUrl: "/views/app.html",
+        templateUrl: "views/app.html",
         resolve: loadSequence('chartjs', 'chart.js', 'chatCtrl'),
         abstract: true
     }).state('app.dashboard', {
         url: "/dashboard",
-        templateUrl: "/views/old/dashboard.html",
+        templateUrl: "views/dashboard.html",
         resolve: loadSequence('d3', 'ui.knob', 'countTo', 'dashboardCtrl'),
         title: 'Dashboard',
         ncyBreadcrumb: {
@@ -50,7 +50,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.pagelayouts.fixedheader', {
         url: "/fixed-header",
-        templateUrl: "/views/old/dashboard-2.html",
+        templateUrl: "views/dashboard-2.html",
         resolve: loadSequence('d3', 'ui.knob', 'countTo', 'dashboardCtrl'),
         title: 'Fixed Header',
         ncyBreadcrumb: {
@@ -62,7 +62,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.pagelayouts.fixedsidebar', {
         url: "/fixed-sidebar",
-        templateUrl: "/views/old/dashboard-3.html",
+        templateUrl: "views/dashboard-3.html",
         resolve: loadSequence('d3', 'ui.knob', 'countTo', 'dashboardCtrl'),
         title: 'Fixed Sidebar',
         ncyBreadcrumb: {
@@ -74,7 +74,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.pagelayouts.fixedheadersidebar', {
         url: "/fixed-header-and-sidebar",
-        templateUrl: "/views/old/dashboard-4.html",
+        templateUrl: "views/dashboard-4.html",
         resolve: loadSequence('d3', 'ui.knob', 'countTo', 'dashboardCtrl'),
         title: 'Fixed Header &amp; Sidebar',
         ncyBreadcrumb: {
@@ -87,7 +87,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.pagelayouts.fixedfooter', {
         url: "/fixed-footer",
-        templateUrl: "/views/old/dashboard-5.html",
+        templateUrl: "views/dashboard-5.html",
         resolve: loadSequence('d3', 'ui.knob', 'countTo', 'dashboardCtrl'),
         title: 'Fixed Footer',
         ncyBreadcrumb: {
@@ -99,7 +99,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.pagelayouts.boxedpage', {
         url: "/boxed-page",
-        templateUrl: "/views/old/dashboard.html",
+        templateUrl: "views/dashboard.html",
         resolve: loadSequence('dashboardCtrl', 'd3', 'ui.knob'),
         title: 'Boxed Page',
         ncyBreadcrumb: {
@@ -107,7 +107,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.layouts', {
         url: "/layouts",
-        templateUrl: "/views/old/layouts.html",
+        templateUrl: "views/layouts.html",
         title: 'Layouts',
         ncyBreadcrumb: {
             label: 'Layouts'
@@ -121,7 +121,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.ui.elements', {
         url: '/elements',
-        templateUrl: "/views/old/ui_elements.html",
+        templateUrl: "views/ui_elements.html",
         title: 'Elements',
         icon: 'ti-layout-media-left-alt',
         ncyBreadcrumb: {
@@ -129,7 +129,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.ui.buttons', {
         url: '/buttons',
-        templateUrl: "/views/old/ui_buttons.html",
+        templateUrl: "views/ui_buttons.html",
         title: 'Buttons',
         resolve: loadSequence('laddaCtrl'),
         ncyBreadcrumb: {
@@ -137,14 +137,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.ui.links', {
         url: '/links',
-        templateUrl: "/views/old/ui_links.html",
+        templateUrl: "views/ui_links.html",
         title: 'Link Effects',
         ncyBreadcrumb: {
             label: 'Link Effects'
         }
     }).state('app.ui.icons', {
         url: '/icons',
-        templateUrl: "/views/old/ui_icons.html",
+        templateUrl: "views/ui_icons.html",
         title: 'Font Awesome Icons',
         ncyBreadcrumb: {
             label: 'Font Awesome Icons'
@@ -152,7 +152,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('iconsCtrl')
     }).state('app.ui.lineicons', {
         url: '/line-icons',
-        templateUrl: "/views/old/ui_line_icons.html",
+        templateUrl: "views/ui_line_icons.html",
         title: 'Linear Icons',
         ncyBreadcrumb: {
             label: 'Linear Icons'
@@ -160,14 +160,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('iconsCtrl')
     }).state('app.ui.lettericons', {
         url: '/letter-icons',
-        templateUrl: "/views/old/ui_letter_icons.html",
+        templateUrl: "views/ui_letter_icons.html",
         title: 'Letter Icons',
         ncyBreadcrumb: {
             label: 'Letter Icons'
         }
     }).state('app.ui.modals', {
         url: '/modals',
-        templateUrl: "/views/old/ui_modals.html",
+        templateUrl: "views/ui_modals.html",
         title: 'Modals',
         ncyBreadcrumb: {
             label: 'Modals'
@@ -175,14 +175,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('asideCtrl')
     }).state('app.ui.toggle', {
         url: '/toggle',
-        templateUrl: "/views/old/ui_toggle.html",
+        templateUrl: "views/ui_toggle.html",
         title: 'Toggle',
         ncyBreadcrumb: {
             label: 'Toggle'
         }
     }).state('app.ui.tabs_accordions', {
         url: '/accordions',
-        templateUrl: "/views/old/ui_tabs_accordions.html",
+        templateUrl: "views/ui_tabs_accordions.html",
         title: "Tabs & Accordions",
         ncyBreadcrumb: {
             label: 'Tabs & Accordions'
@@ -190,14 +190,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('vAccordionCtrl')
     }).state('app.ui.panels', {
         url: '/panels',
-        templateUrl: "/views/old/ui_panels.html",
+        templateUrl: "views/ui_panels.html",
         title: 'Panels',
         ncyBreadcrumb: {
             label: 'Panels'
         }
     }).state('app.ui.notifications', {
         url: '/notifications',
-        templateUrl: "/views/old/ui_notifications.html",
+        templateUrl: "views/ui_notifications.html",
         title: 'Notifications',
         ncyBreadcrumb: {
             label: 'Notifications'
@@ -205,7 +205,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('toasterCtrl', 'sweetAlertCtrl', 'notificationIconsCtrl', 'notifyCtrl', 'ngNotify')
     }).state('app.ui.sliders', {
         url: '/sliders',
-        templateUrl: "/views/old/ui_sliders.html",
+        templateUrl: "views/ui_sliders.html",
         title: 'Sliders',
         ncyBreadcrumb: {
             label: 'Sliders'
@@ -213,7 +213,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('sliderCtrl')
     }).state('app.ui.treeview', {
         url: '/treeview',
-        templateUrl: "/views/old/ui_tree.html",
+        templateUrl: "views/ui_tree.html",
         title: 'TreeView',
         ncyBreadcrumb: {
             label: 'Treeview'
@@ -221,7 +221,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('angularBootstrapNavTree', 'treeCtrl')
     }).state('app.ui.knob', {
         url: '/knob',
-        templateUrl: "/views/old/ui_knob.html",
+        templateUrl: "views/ui_knob.html",
         title: 'Knob component',
         ncyBreadcrumb: {
             label: 'Knob component'
@@ -229,14 +229,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('d3', 'ui.knob', 'knobCtrl')
     }).state('app.ui.media', {
         url: '/media',
-        templateUrl: "/views/old/ui_media.html",
+        templateUrl: "views/ui_media.html",
         title: 'Media',
         ncyBreadcrumb: {
             label: 'Media'
         }
     }).state('app.ui.nestable', {
         url: '/nestable2',
-        templateUrl: "/views/old/ui_nestable.html",
+        templateUrl: "views/ui_nestable.html",
         title: 'Nestable List',
         ncyBreadcrumb: {
             label: 'Nestable List'
@@ -244,7 +244,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('jquery-nestable-plugin', 'ng-nestable', 'nestableCtrl')
     }).state('app.ui.typography', {
         url: '/typography',
-        templateUrl: "/views/old/ui_typography.html",
+        templateUrl: "views/ui_typography.html",
         title: 'Typography',
         ncyBreadcrumb: {
             label: 'Typography'
@@ -258,21 +258,21 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.table.basic', {
         url: '/basic',
-        templateUrl: "/views/old/table_basic.html",
+        templateUrl: "views/table_basic.html",
         title: 'Basic Tables',
         ncyBreadcrumb: {
             label: 'Basic'
         }
     }).state('app.table.responsive', {
         url: '/responsive',
-        templateUrl: "/views/old/table_responsive.html",
+        templateUrl: "views/table_responsive.html",
         title: 'Responsive Tables',
         ncyBreadcrumb: {
             label: 'Responsive'
         }
     }).state('app.table.dynamic', {
         url: '/dynamic',
-        templateUrl: "/views/old/table_dynamic.html",
+        templateUrl: "views/table_dynamic.html",
         title: 'Dynamic Tables',
         ncyBreadcrumb: {
             label: 'Dynamic'
@@ -280,7 +280,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('dynamicTableCtrl')
     }).state('app.table.data', {
         url: '/data',
-        templateUrl: "/views/old/table_data.html",
+        templateUrl: "views/table_data.html",
         title: 'ngTable',
         ncyBreadcrumb: {
             label: 'ngTable'
@@ -288,7 +288,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('ngTable', 'ngTableCtrl')
     }).state('app.table.export', {
         url: '/export',
-        templateUrl: "/views/old/table_export.html",
+        templateUrl: "views/table_export.html",
         title: 'Table'
     }).state('app.form', {
         url: '/form',
@@ -299,7 +299,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.form.elements', {
         url: '/elements',
-        templateUrl: "/views/old/form_elements.html",
+        templateUrl: "views/form_elements.html",
         title: 'Forms Elements',
         ncyBreadcrumb: {
             label: 'Elements'
@@ -307,7 +307,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('monospaced.elastic', 'ui.mask', 'touchspin-plugin', 'selectCtrl')
     }).state('app.form.pickers', {
         url: '/pickers',
-        templateUrl: "/views/old/form_pickers.html",
+        templateUrl: "views/form_pickers.html",
         title: 'Pickers',
         ncyBreadcrumb: {
             label: 'Pickers'
@@ -315,7 +315,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('dateRangeCtrl', 'spectrum-plugin', 'angularSpectrumColorpicker')
     }).state('app.form.xeditable', {
         url: '/xeditable',
-        templateUrl: "/views/old/form_xeditable.html",
+        templateUrl: "views/form_xeditable.html",
         title: 'Angular X-Editable',
         ncyBreadcrumb: {
             label: 'X-Editable'
@@ -323,7 +323,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('xeditable', 'checklist-model', 'xeditableCtrl')
     }).state('app.form.texteditor', {
         url: '/editor',
-        templateUrl: "/views/old/form_text_editor.html",
+        templateUrl: "views/form_text_editor.html",
         title: 'Text Editor',
         ncyBreadcrumb: {
             label: 'Text Editor'
@@ -331,7 +331,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('ckeditor-plugin', 'ckeditor', 'ckeditorCtrl')
     }).state('app.form.wizard', {
         url: '/wizard',
-        templateUrl: "/views/old/form_wizard.html",
+        templateUrl: "views/form_wizard.html",
         title: 'Form Wizard',
         ncyBreadcrumb: {
             label: 'Wizard'
@@ -339,7 +339,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('wizardCtrl', 'ngNotify')
     }).state('app.form.validation', {
         url: '/validation',
-        templateUrl: "/views/old/form_validation.html",
+        templateUrl: "views/form_validation.html",
         title: 'Form Validation',
         ncyBreadcrumb: {
             label: 'Validation'
@@ -347,7 +347,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('validationCtrl')
     }).state('app.form.cropping', {
         url: '/image-cropping',
-        templateUrl: "/views/old/form_image_cropping.html",
+        templateUrl: "views/form_image_cropping.html",
         title: 'Image Cropping',
         ncyBreadcrumb: {
             label: 'Image Cropping'
@@ -355,7 +355,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('ngImgCrop', 'cropCtrl')
     }).state('app.form.upload', {
         url: '/file-upload',
-        templateUrl: "/views/old/form_file_upload.html",
+        templateUrl: "views/form_file_upload.html",
         title: 'Multiple File Upload',
         ncyBreadcrumb: {
             label: 'File Upload'
@@ -370,7 +370,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.pages.user', {
         url: '/user',
-        templateUrl: "/views/old/pages_user_profile.html",
+        templateUrl: "views/pages_user_profile.html",
         title: 'User Profile',
         ncyBreadcrumb: {
             label: 'User Profile'
@@ -378,14 +378,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('flow', 'userCtrl')
     }).state('app.pages.invoice', {
         url: '/invoice',
-        templateUrl: "/views/old/pages_invoice.html",
+        templateUrl: "views/pages_invoice.html",
         title: 'Invoice',
         ncyBreadcrumb: {
             label: 'Invoice'
         }
     }).state('app.pages.timeline', {
         url: '/timeline',
-        templateUrl: "/views/old/pages_timeline.html",
+        templateUrl: "views/pages_timeline.html",
         title: 'Timeline',
         ncyBreadcrumb: {
             label: 'Timeline'
@@ -393,7 +393,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('ngMap')
     }).state('app.pages.calendar', {
         url: '/calendar',
-        templateUrl: "/views/old/pages_calendar.html",
+        templateUrl: "views/pages_calendar.html",
         title: 'Calendar',
         ncyBreadcrumb: {
             label: 'Calendar'
@@ -401,15 +401,15 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('mwl.calendar', 'calendarCtrl')
     }).state('app.pages.messages', {
         url: '/messages',
-        templateUrl: "/views/old/pages_messages.html",
+        templateUrl: "views/pages_messages.html",
         resolve: loadSequence('inboxCtrl')
     }).state('app.pages.messages.inbox', {
         url: '/inbox/:inboxID',
-        templateUrl: "/views/old/pages_inbox.html",
+        templateUrl: "views/pages_inbox.html",
         controller: 'ViewMessageCrtl'
     }).state('app.pages.blank', {
         url: '/blank',
-        templateUrl: "/views/old/pages_blank_page.html",
+        templateUrl: "views/pages_blank_page.html",
         ncyBreadcrumb: {
             label: 'Starter Page'
         }
@@ -422,21 +422,21 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.utilities.search', {
         url: '/search',
-        templateUrl: "/views/old/utility_search_result.html",
+        templateUrl: "views/utility_search_result.html",
         title: 'Search Results',
         ncyBreadcrumb: {
             label: 'Search Results'
         }
     }).state('app.utilities.pricing', {
         url: '/pricing',
-        templateUrl: "/views/old/utility_pricing_table.html",
+        templateUrl: "views/utility_pricing_table.html",
         title: 'Pricing Table',
         ncyBreadcrumb: {
             label: 'Pricing Table'
         }
     }).state('app.maps', {
         url: "/maps",
-        templateUrl: "/views/old/maps.html",
+        templateUrl: "views/maps.html",
         resolve: loadSequence('ngMap', 'mapsCtrl'),
         title: "Maps",
         ncyBreadcrumb: {
@@ -444,7 +444,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.charts', {
         url: "/charts",
-        templateUrl: "/views/old/charts.html",
+        templateUrl: "views/charts.html",
         resolve: loadSequence('chartjs', 'chart.js', 'chartsCtrl'),
         title: "Charts",
         ncyBreadcrumb: {
@@ -455,10 +455,10 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         template: '<div ui-view class="fade-in-up"></div>'
     }).state('error.404', {
         url: '/404',
-        templateUrl: "/views/old/utility_404.html",
+        templateUrl: "views/utility_404.html",
     }).state('error.500', {
         url: '/500',
-        templateUrl: "/views/old/utility_500.html",
+        templateUrl: "views/utility_500.html",
     })
 
 	// Login routes
@@ -469,16 +469,16 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
 	    abstract: true
 	}).state('login.signin', {
 	    url: '/signin',
-	    templateUrl: "/views/old/login_login.html"
+	    templateUrl: "views/login_login.html"
 	}).state('login.forgot', {
 	    url: '/forgot',
-	    templateUrl: "/views/old/login_forgot.html"
+	    templateUrl: "views/login_forgot.html"
 	}).state('login.registration', {
 	    url: '/registration',
-	    templateUrl: "/views/old/login_registration.html"
+	    templateUrl: "views/login_registration.html"
 	}).state('login.lockscreen', {
 	    url: '/lock',
-	    templateUrl: "/views/old/login_lock_screen.html"
+	    templateUrl: "views/login_lock_screen.html"
 	})
 
 	// Landing Page route
@@ -489,7 +489,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
 	    resolve: loadSequence('jquery-appear-plugin', 'ngAppear', 'countTo')
 	}).state('landing.welcome', {
 	    url: '/welcome',
-	    templateUrl: "/views/old/landing_page.html"
+	    templateUrl: "views/landing_page.html"
 	});
     // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
     function loadSequence() {

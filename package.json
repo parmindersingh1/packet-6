@@ -1,10 +1,9 @@
 {
-  "name": "iAccelWebUi",
+  "name": "Packet",
   "private": true,
   "version": "0.0.0",
   "author": "Datiot",
   "description": "Web UI front end for iAccel IoT platform",
-  "repository": "https://github.com/punchouty/iAccelWebUi",
   "license": "Datiot REGULAR LICENSE",
   "devDependencies": {
     "bower": "^1.7.7",

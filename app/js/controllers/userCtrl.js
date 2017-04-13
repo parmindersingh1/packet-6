@@ -17,7 +17,7 @@ app.controller('UserCtrl', ["$scope", "flowFactory", function ($scope, flowFacto
         gender: 'male',
         zipCode: '12345',
         city: 'London (UK)',
-        avatar: '/images/avatar-1-xl.jpg',
+        avatar: 'images/avatar-1-xl.jpg',
         twitter: '',
         github: '',
         facebook: '',

@@ -1,7 +1,7 @@
 
 ## Getting Started
 
-To get you started you can simply clone the iaccelwebui repository and install the dependencies. You can get git from [https://github.com/punchouty/iaccelwebui](https://github.com/punchouty/iaccelwebui).
+To get you started you can simply clone the packet-6 repository and install the dependencies.
 
 ### Prerequisites
 
@@ -11,21 +11,16 @@ To get you started you can simply clone the iaccelwebui repository and install t
 * [Node](http://nodejs.org/)
 * json-server
 
-#### Server
-
-* Java 8
-* Spring Tool Suit
-* Mongo DB
-* Robomongo (Client for Mongo DB)
+ for Mongo DB)
 * Redis
 
 ### Clone Project
 
-Clone the iaccelwebui repository using [git][git]:
+Clone the packet-6 repository using [git][git]:
 
 ```
-git clone https://github.com/punchouty/iaccelwebui
-cd iaccelwebui
+git clone https://github.com/punchouty/packet-6
+cd packet-6
 ```
 
 
@@ -57,7 +52,7 @@ folders in your project.
 * `app/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
-iaccelwebui changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+packet-6 changes this location through the `.bowerrc` file.  Putting it in the app folder makes
 it easier to serve the files by a webserver.*
 
 ### Run the Application
@@ -183,7 +178,7 @@ development server.
 
 ### Running application during development
 
-The iaccelwebui project comes preconfigured with a local development webserver.  It is a node.js
+The packet-6 project comes preconfigured with a local development webserver.  It is a node.js
 tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
 install the tool globally:
 

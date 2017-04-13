@@ -17,7 +17,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Themify Icons -->
-    <link rel="stylesheet" href="bower_components/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="bower_components/themify-icons/themify-icons.css">
     <!-- Flag Icons -->
     <link rel="stylesheet" href="bower_components/flag-icon-css/css/flag-icon.min.css">
     <!-- Loading Bar -->
@@ -58,7 +58,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body ng-controller="AppCtrl">
-    <div ui-view id="app" class="lyt-3" ng-class="{'app-mobile' : app.isMobile, 'app-navbar-fixed' : app.layout.isNavbarFixed, 'app-sidebar-fixed' : app.layout.isSidebarFixed, 'app-sidebar-closed':app.layout.isSidebarClosed, 'app-footer-fixed':app.layout.isFooterFixed}"></div>
+    <div ui-view id="app" class="lyt-6" ng-class="{'app-mobile' : app.isMobile, 'app-navbar-fixed' : app.layout.isNavbarFixed, 'app-sidebar-fixed' : app.layout.isSidebarFixed, 'app-sidebar-closed':app.layout.isSidebarClosed, 'app-footer-fixed':app.layout.isFooterFixed}"></div>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -69,7 +69,7 @@
     <!-- Moment -->
     <script src="bower_components/moment/min/moment.min.js"></script>
     <!-- Perfect Scrollbar -->
-    <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="bower_components/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js"></script>
     <!-- Date Range Picker -->
     <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- Sweet Alert -->
@@ -141,30 +141,26 @@
     <script src="js/config.constant.js"></script>
     <script src="js/config.router.js"></script>
     <!-- Packet Directives -->
-    <script src="js/directives/old/toggle.js"></script>
-    <script src="js/directives/old/perfect-scrollbar.js"></script>
-    <script src="js/directives/old/empty-links.js"></script>
-    <script src="js/directives/old/sidebars.js"></script>
-    <script src="js/directives/old/off-click.js"></script>
-    <script src="js/directives/old/full-height.js"></script>
-    <script src="js/directives/old/panel-tools.js"></script>
-    <script src="js/directives/old/char-limit.js"></script>
-    <script src="js/directives/old/dismiss.js"></script>
-    <script src="js/directives/old/compare-to.js"></script>
-    <script src="js/directives/old/select.js"></script>
-    <script src="js/directives/old/messages.js"></script>
-    <script src="js/directives/old/chat.js"></script>
-    <script src="js/directives/old/touchspin.js"></script>
-    <script src="js/directives/old/file-upload.js"></script>
-    <script src="js/directives/old/letter-icon.js"></script>
-    <script src="js/directives/old/landing-header.js"></script>
-    <script src="js/directives/charts.js"></script>
-
+    <script src="js/directives/toggle.js"></script>
+    <script src="js/directives/perfect-scrollbar.js"></script>
+    <script src="js/directives/empty-links.js"></script>
+    <script src="js/directives/sidebars.js"></script>
+    <script src="js/directives/off-click.js"></script>
+    <script src="js/directives/full-height.js"></script>
+    <script src="js/directives/panel-tools.js"></script>
+    <script src="js/directives/char-limit.js"></script>
+    <script src="js/directives/dismiss.js"></script>
+    <script src="js/directives/compare-to.js"></script>
+    <script src="js/directives/select.js"></script>
+    <script src="js/directives/messages.js"></script>
+    <script src="js/directives/chat.js"></script>
+    <script src="js/directives/touchspin.js"></script>
+    <script src="js/directives/file-upload.js"></script>
+    <script src="js/directives/letter-icon.js"></script>
+    <script src="js/directives/landing-header.js"></script>
     <!-- Packet Controllers -->
-    <script src="js/controllers/old/mainCtrl.js"></script>
-    <script src="js/controllers/old/inboxCtrl.js"></script>
-    <script src="js/controllers/old/bootstrapCtrl.js"></script>
-
-    <!-- Datiot Scripts -->
+    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/controllers/inboxCtrl.js"></script>
+    <script src="js/controllers/bootstrapCtrl.js"></script>
 </body>
 </html>

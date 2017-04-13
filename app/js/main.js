@@ -12,10 +12,10 @@ function ($rootScope, $state, $stateParams) {
     // GLOBAL APP SCOPE
     // set below basic information
     $rootScope.app = {
-        name: 'iAccel', // name of your project
-        author: 'Datiot', // author's name or company name
-        description: 'Web UI front end for iAccel IoT platform', // brief description
-        version: '0.0', // current version
+        name: 'Packet', // name of your project
+        author: 'ClipTheme', // author's name or company name
+        description: 'Angular Bootstrap Admin Template', // brief description
+        version: '1.0', // current version
         year: ((new Date()).getFullYear()), // automatic current year (for copyright information)
         isMobile: (function () {// true if the browser is a mobile device
             var check = false;
@@ -25,14 +25,14 @@ function ($rootScope, $state, $stateParams) {
             return check;
         })(),
         defaultLayout: {
-            isNavbarFixed: false, //true if you want to initialize the template with fixed header
+            isNavbarFixed: true, //true if you want to initialize the template with fixed header
             isSidebarFixed: true, // true if you want to initialize the template with fixed sidebar
             isSidebarClosed: false, // true if you want to initialize the template with closed sidebar
             isFooterFixed: false, // true if you want to initialize the template with fixed footer
             isBoxedPage: false, // true if you want to initialize the template with boxed layout
-            theme: 'lyt3-theme-1', // indicate the theme chosen for your project
-            logo: 'images/logo2.png', // relative path of the project logo
-            logoCollapsed: 'images/logo-collapsed2.png' // relative path of the collapsed logo
+            theme: 'lyt6-theme-1', // indicate the theme chosen for your project
+            logo: 'images/logo.png', // relative path of the project logo
+            logoCollapsed: 'images/logo-collapsed.png' // relative path of the collapsed logo
         },
         layout: ''
     };
@@ -50,7 +50,7 @@ function ($translateProvider) {
     // prefix and suffix information  is required to specify a pattern
     // You can simply use the static-files loader with this pattern:
     $translateProvider.useStaticFilesLoader({
-        prefix: '../i18n/',
+        prefix: './i18n/',
         suffix: '.json'
     });
 
@@ -84,7 +84,7 @@ app.config(function ($breadcrumbProvider) {
 //set a prefix to avoid overwriting any local storage variables
 app.config(['$localStorageProvider',
     function ($localStorageProvider) {
-        $localStorageProvider.setKeyPrefix('PacketLtr3');
+        $localStorageProvider.setKeyPrefix('PacketLtr6');
     }]);
 //filter to convert html to plain text
 app.filter('htmlToPlaintext', function () {
